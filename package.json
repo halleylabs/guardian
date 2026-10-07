@@ -4,6 +4,14 @@
   "type": "module",
   "description": "A judgment sidecar for agent loops: every action reviewed before execution, faster and ~1000x cheaper than the agent it watches.",
   "license": "MIT",
+  "homepage": "https://github.com/halleylabs/guardian#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halleylabs/guardian.git"
+  },
+  "bugs": {
+    "url": "https://github.com/halleylabs/guardian/issues"
+  },
   "scripts": {
     "bench": "node bench/run.js",
     "bench:adversarial": "node bench/run-adversarial.js"

@@ -1,5 +1,7 @@
 # guardian
 
+<sub>A <a href="https://halleylabs.dev">Halley</a> project</sub>
+
 **A judgment sidecar for agent loops. Every action reviewed before it executes, by a judge that is faster and ~1000x cheaper than the agent it watches.**
 
 Agents act many times per second. Human review takes minutes. So every agent shipped today is effectively unsupervised while it acts, and "human in the loop" quietly means "human after the fact." Guardian closes that gap: one ~400ms judgment call per proposed action, before execution, task-aware, fail-open.
@@ -67,7 +69,7 @@ Without a key, the client falls back to a deterministic stub so the harness runs
 ## Honest limits
 
 - The 44 main-bench cases were authored by the same person who wrote the judging questions. The adversarial round exists precisely to counter that, but more independent cases are welcome: PRs to `bench/` are the most useful contribution.
-- These benchmarks judge action *descriptions*. Wiring `review()` into a live harness (planned: [fasthands](https://github.com/anzal1/fasthands)) is the step from classifier to safety layer.
+- These benchmarks judge action *descriptions*. Wiring `review()` into a live harness (planned: [fasthands](https://github.com/halleylabs/fasthands)) is the step from classifier to safety layer.
 - Known-fact hazards (typosquats, malicious domains, CVE'd packages) belong in code-side lookups, not judgment. Guardian is one layer, not the only one.
 - Judgment probabilities are Jev's; validate thresholds on your own action distribution before trusting them in production.
 
